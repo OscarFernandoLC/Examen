@@ -4,6 +4,9 @@ using UnityEngine;
 //nuevo
 public class Coin : MonoBehaviour
 {
+
+	public int rotatespeed = 1;
+
 	public static int countCoins = 0;
     void Start()
     {
@@ -15,7 +18,9 @@ public class Coin : MonoBehaviour
 
     void Update()
     {
-    }
+		transform.Rotate(0, rotatespeed, 0, Space.World); 
+
+	}
 
 	void OnTriggerEnter(Collider collider){
 	Debug.Log("Se ha recolectado la moneda");
